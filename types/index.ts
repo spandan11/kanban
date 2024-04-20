@@ -1,14 +1,17 @@
-export type Status = "BACKLOG" | "TODO" | "INPROGRESS" | "DONE";
+export type Id = string | number;
 
-export interface IColumn {
-  title: string;
-  icon: JSX.Element | undefined;
-  status: Status;
-}
+export type Content = {
+  contentTitle: string;
+  contentDescription?: string;
+};
 
-export interface ITask {
-  id: string;
+export type Column = {
+  id: Id;
   title: string;
-  description?: string;
-  status: Status;
-}
+};
+
+export type Task = {
+  id: Id;
+  columnId: Id;
+  content: Content;
+};

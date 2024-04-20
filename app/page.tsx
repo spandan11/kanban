@@ -1,7 +1,11 @@
+import KanbanBoard from "@/components/kanban/KanbanBoard";
+import Header from "@/components/kanban/Header";
+
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1>Your Recent Kanbans</h1>
+    <div key="1" className="flex flex-col h-screen">
+      <Header />
+      <KanbanBoard />
     </div>
   );
 }
